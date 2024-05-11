@@ -16,7 +16,7 @@ const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again");
 
 let word = "magnolia";
-const guessedLetters = [];
+let guessedLetters = [];
 let remainingGuesses = 8;
 
 // Async function
@@ -161,7 +161,7 @@ playAgainButton.addEventListener("click", function () {
     message.innerText = "";
     guessedLettersElement.innerText = "";
     remainingGuesses = 8;
-    guessedLetters.length = 0;
+    guessedLetters = [];
     remainingGuessesSpan.innerText = `You have ${remainingGuesses}.`;
     guessLetterButton.classList.remove("hide");
     remainingGuessesElement.classList.remove("hide");
